@@ -1,0 +1,310 @@
+@font-face {
+    font-family: "UbuntuBold";
+    src: url("../../../assets/fonts/ubuntu/Ubuntu-B.ttf") format("woff");
+  }
+  
+  @font-face {
+    font-family: "UbuntuRegular";
+    src: url("../../../assets/fonts/ubuntu/Ubuntu-R.ttf") format("woff");
+  }
+  
+  .aktuelle-section {
+    margin: 0 auto;
+  }
+  
+  .aktuelle-section h1 {
+    font-family: UbuntuBold;
+    color: 	#152247;
+    font-size: 40px;
+    position: relative;
+  }
+  
+  .aktuelle-section-title h1 {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+  
+  .aktuelle-section-title h1:before {
+    content : "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    border-bottom: 4px solid #ffa04a;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .aktuelle-section-content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 10%;
+  }
+  
+  .aktuelle-section-content {
+    margin: 10px 0;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    position: relative;
+    width: 32%;
+  }
+  
+  .aktuelle-section-content div:first-child {
+    padding: 30px;
+  }
+  
+  .aktuelle-section-content-container .aktuelle-section-content .aktuelle-section-content-img {
+    background: #FFF3EA;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  
+  .aktuelle-section-content p {
+    color: #A8A8A8;
+    font-family: UbuntuRegular;
+    margin: 10px 0;
+  }
+  
+  .aktuelle-section-content p img {
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+  }
+  
+  .aktuelle-section-button-container {
+    margin: 0 10%;
+  }
+  
+  .aktuelle-section-content h2 {
+    margin: 0;
+    font-family: UbuntuBold;
+    color: 	#152247;
+  }
+  
+  .orange-button {
+    margin: 20px auto 100px auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: UbuntuBold;
+    width: 32%;
+    background: #ffa04a;
+    border: 1px solid #ffa04a;
+    padding: 15px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .orange-button:hover {
+    border: 1px solid #ffffff;
+  }
+  
+  .aktuelle-section-content .aktuelle-section-content-clock img {
+    top: 3px;
+  }
+  
+  .aktuelle-section-content-clock {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+  
+  .aktuelle-section-content-button {
+    color: #ffa04a;
+    background: #152247;
+    font-family: UbuntuBold;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .aktuelle-section-content-button:hover {
+    color: #ffffff;
+  }
+  
+  .testimonial-section {
+    background: #ffa04a;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    justify-content: space-between;
+    height: 350px;
+  }
+  
+  #testimonial-img1 {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../../assets/img/testimonials.jpg");
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  #testimonial-img2 {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../../assets/img/img-user.jpg");
+    display: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  #testimonial-img3 {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../../assets/img/banner.jpg");
+    display: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  #testimonial2,
+  #testimonial3 {
+    display: none;
+  }
+  
+  .testimonial-section-text {
+    padding-top: 6%;
+    padding-bottom: 2%;
+    margin-right: 5%;
+    display: flex;
+  }
+  
+  .testimonial-section-text p {
+    color: #ffffff;
+    font-family: UbuntuBold;
+    margin: 5px;
+  }
+  
+  .testimonial-section-text img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  .testimonial-section-text .testimonial-section-name {
+    text-align: right;
+    margin-top: 40px;
+  }
+  
+  .testimonial-section-name span:nth-of-type(2) {
+    font-family: UbuntuRegular;
+    display: inline-block;
+    margin-left: 30px;
+  }
+  
+  .testimonial-dots-section {
+    margin-top: 4%;
+  }
+  
+  .testimonial-dots-section .dot {
+    border-radius: 50%;
+    margin: 15px 0 15px 100px;
+    cursor: pointer;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 10px;
+    color: transparent;
+    border: 2px solid white;
+    opacity: 0.5;
+  }
+  
+  .testimonial-dots-section .dot-active {
+    opacity: 1;
+  }
+  
+  @media all and (max-width: 1024px) {
+    .testimonial-dots-section {
+      position: relative;
+      margin-right: 50px;
+    }
+  
+    .aktuelle-section-content-container {
+      padding: 0 5%;
+    }
+  
+    .aktuelle-section-button-container {
+      margin: 0 5%;
+    }
+  
+    .testimonial-section {
+      margin-left: 5%;
+      justify-content: center;
+    }
+  }
+  
+  @media all and (max-width: 1366px) {
+    .testimonial-section {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  
+  @media all and (max-width: 768px) {
+    .aktuelle-section-content-container {
+      justify-content: center;
+    }
+  
+    .aktuelle-section-content {
+      width: 60%;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .testimonial-dots-section {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  
+    .testimonial-dots-section .dot {
+      margin: 15px;
+    }
+  
+    .testimonial-section-text {
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    .aktuelle-section-content {
+      width: 100%;
+    }
+  
+    .testimonial-section {
+      margin-left: 0;
+    }
+  
+    .testimonial-section-text {
+      margin-right: 0;
+    }
+  
+    .testimonial-dots-section {
+      display: block;
+      position: relative;
+      top: 30px
+    }
+  
+    .aktuelle-section-button-container .orange-button {
+      width: 50%;
+    }
+  }
+  

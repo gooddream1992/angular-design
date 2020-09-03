@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "UbuntuBold";
+    src: url("../../../assets/fonts/ubuntu/Ubuntu-B.ttf") format("woff");
+  }
+  
+  @font-face {
+    font-family: "UbuntuRegular";
+    src: url("../../../assets/fonts/ubuntu/Ubuntu-R.ttf") format("woff");
+  }
+  
+  .price-section {
+    margin: 0 auto;
+  }
+  
+  .price-section h1 {
+    font-family: UbuntuBold;
+    color: 	#152247;
+    font-size: 40px;
+    position: relative;
+  }
+  
+  .price-section-title h1 {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+  
+  .price-section-title h1:before {
+    content : "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    border-bottom: 4px solid #ffa04a;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .price-section-content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 10%;
+  }
+  
+  .price-section-content {
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    position: relative;
+    width: 49%;
+  }
+  
+  .price-section-content div:first-child {
+    padding: 30px;
+  }
+  
+  .price-section-content-button {
+    color: #ffa04a;
+    font-family: UbuntuBold;
+    background: #FEF4E8;
+    max-width: 225px;
+    min-width: 225px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  
+  .price-section-price {
+    text-align: center;
+  }
+  
+  .price-section-price h1 {
+    margin-bottom: 0;
+  }
+  
+  .price-section-price p {
+    font-family: UbuntuBold;
+    margin: 0;
+    color: #A8A8A8;
+  }
+  
+  .price-section-content-text {
+    margin: 40px auto;
+    display: flex;
+    align-items: baseline;
+    width: 340px;
+  }
+  
+  .price-section-content-text span,
+  .price-section-content-text p {
+    font-family: UbuntuRegular;
+    color: #A8A8A8;
+  }
+  
+  .price-section-button-container {
+    margin: 0 10%;
+  }
+  
+  .price-section-content-text p {
+    margin: 5px 0;
+  }
+  
+  .orange-button {
+    margin: 20px auto 100px auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: UbuntuBold;
+    width: 32%;
+    background: #ffa04a;
+    border: 1px solid #ffa04a;
+    padding: 15px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .orange-button:hover {
+    border: 1px solid #ffffff;
+  }
+  
+  .price-section-content .price-section-content-text .price-section-content-icon {
+    background: #FEF4E8;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  .price-section-content-icon img {
+    position: relative;
+    top: 2px;
+  }
+  
+  @media all and (max-width: 1024px) {
+    .price-section-content-container,
+    .price-section-button-container {
+      margin: 0 5%;
+    }
+  
+    .price-section-content-container {
+      justify-content: center;
+    }
+  
+    .price-section-content {
+      width: 60%;
+      margin: 10px 0;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .price-section-content {
+      width: 100%;
+    }
+  
+    .price-section-button-container .orange-button {
+      width: 50%;
+    }
+  }
+  

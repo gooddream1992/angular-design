@@ -1,0 +1,198 @@
+@font-face {
+    font-family: "UbuntuBold";
+    src: url("../../../assets/fonts/ubuntu/Ubuntu-B.ttf") format("woff");
+  }
+  
+  @font-face {
+    font-family: "UbuntuRegular";
+    src: url("../../../assets/fonts/ubuntu/Ubuntu-R.ttf") format("woff");
+  }
+  
+  .content-section-container {
+    top: 76px;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .content-section-first-slide {
+    background-image: url("../../../assets/img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  
+  .content-section-second-slide {
+    background-image: url("../../../assets/img/img-user.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: none;
+  }
+  
+  .content-section {
+    height: 80vh;
+    position: relative;
+  }
+  
+  .content-section-text {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+  }
+  
+  .content-section {
+    color: #ffffff;
+    font-family: UbuntuRegular;
+  }
+  
+  .content-section h1 {
+    font-family: UbuntuBold;
+    font-size: 40px;
+    margin: 5px 0;
+  }
+  
+  .orange-button {
+    font-family: UbuntuBold;
+    width: 100%;
+    min-width: 225px;
+    display: inline;
+    background: #ffa04a;
+    border: 1px solid #ffa04a;
+    padding: 15px 20px;
+    border-radius: 5px;
+    position: relative;
+    top: 40px;
+    cursor: pointer;
+  }
+  
+  .orange-button:hover {
+    border: 1px solid #ffffff;
+  }
+  
+  .content-section-arrows {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+  }
+  
+  .content-section-arrows .arrow-left {
+    background: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+  }
+  
+  .content-section-arrows .arrow-left:hover {
+    border: 1px solid #ffa04a;
+  }
+  
+  .content-section-arrows .arrow-right {
+    background: #ffa04a;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 5px;
+    border: 1px solid #ffa04a;
+    cursor: pointer;
+  }
+  
+  .content-section-arrows .arrow-right:hover {
+    border: 1px solid #ffffff;
+  }
+  
+  .arrow-right-icon,
+  .arrow-left-icon {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    top: 15px;
+    left: 20px;
+  }
+  
+  .arrow-right-icon {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+  }
+  
+  .arrow-left-icon {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .content-info-section {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #F0F0F0;
+    flex-wrap: wrap;
+    padding: 0 10%;
+  }
+  
+  .content-info {
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  .content-info:nth-of-type(2) {
+    border-left: 1px solid #F0F0F0;
+    border-right: 1px solid #F0F0F0;
+    padding: 0 15px;
+  }
+  
+  .content-info img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .content-info p {
+    margin: 5px;
+    color: 	#A8A8A8;
+    font-family: UbuntuRegular;
+  }
+  
+  .content-info h1 {
+    margin: 0;
+    color: 	#152247;
+    font-family: UbuntuBold;
+  }
+  
+  .content-info-text {
+    margin-top: 30px;
+  }
+  
+  @media all and (min-width: 1300px) {
+    .content-section-text {
+      left: 12%;
+    }
+  }
+  
+  @media all and (max-width: 1024px) {
+    .content-info:nth-of-type(2) {
+      border: none;
+      max-width: 320px;
+    }
+  
+    .content-info {
+      padding: 0;
+    }
+  
+    .content-info-section {
+      padding: 0 5%;
+    }
+  
+    .content-info:nth-of-type(2) {
+      padding: 0;
+    }
+  }
+  
+  @media all and (max-width: 768px) {
+    .content-info-section {
+      justify-content: center;
+    }
+  }
+  

@@ -1,0 +1,104 @@
+.footer-section {
+    background: #152247;
+    border-bottom: 1px solid #52648E;
+    margin: 0 auto;
+  }
+  
+  .footer-section-content {
+    padding: 50px 0 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid #52648E;
+  }
+  
+  .footer-content-logo img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-content-logo p {
+    color: #52648E;
+    font-family: UbuntuRegular;
+    margin: 5px 0;
+  }
+  
+  .footer-content-links h2 {
+    color: #ffffff;
+    font-family: UbuntuBold;
+    margin-top: 0;
+  }
+  
+  .footer-content-links p a {
+    color: #52648E;
+    font-family: UbuntuRegular;
+    text-decoration: none;
+  }
+  
+  .footer-content-links p a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-content-logo,
+  .footer-content-links {
+    margin: 0 40px;
+  }
+  
+  .footer-content-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-content-link img {
+    margin-right: 10px;
+  }
+  
+  .footer-copyright-section {
+    color: #52648E;
+    font-family: UbuntuRegular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-top: 1px solid #52648E;
+  }
+  
+  .footer-copyright-section p {
+    margin-bottom: 0;
+  }
+  
+  .footer-copyright-section span {
+    color: #ffa04a;
+    font-family: UbuntuBold;
+  }
+  
+  @media all and (max-width: 768px) {
+  
+  }
+  
+  @media all and (max-width: 768px) {
+    .footer-content-logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    .footer-content-links {
+      margin: 0 20px;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .footer-section {
+      padding: 0;
+    }
+  
+    .footer-content-logo, .footer-content-links {
+      width: 100%;
+    }
+  
+    .footer-section-content {
+      text-align: center;
+    }
+  }
+  
