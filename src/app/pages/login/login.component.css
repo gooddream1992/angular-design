@@ -1,0 +1,159 @@
+.main-container {
+    min-height: calc(100vh - 50px);
+    width: 100%;
+    background: #f5f5f5;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.main-container .logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-container .logo img {
+    width: 170px;
+}
+
+.login-section {
+    width: 100%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center;
+    justify-content: center;
+}
+
+.login-section .card {
+    width: 65%;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.login-section .card .aside-left {
+    background: url('../../../assets/img/login-img.jpg');
+    background-size: cover;
+    min-height: 500px;
+    background-position-x: center;
+}
+
+.login-section .card .aside-right {
+    padding: 80px 30px;
+}
+
+.login-section .card .aside-right h1 {
+    font-family: 'Ubuntu';
+    font-size: 30px;
+    color: #152247;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.login-section .card .aside-right p {
+    font-family: 'Ubuntu';
+    font-size: 13px;
+    color: #152247;
+    margin-bottom: 25px;
+}
+
+.login-section .card .aside-right input {
+    font-family: 'Ubuntu';
+    font-size: 13px;
+    color: #152247 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #f5f5f5;
+    padding: 20px;
+    width: 100%;
+    ;
+}
+
+mat-checkbox {
+    font-size: 13px;
+    font-family: ubuntu;
+    color: #152247;
+}
+
+.login-section .card .aside-right .submit-btn button {
+    width: 100%;
+    background: #ffa04a;
+    border: none;
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.login-section .card .aside-right span {
+    font-family: 'Ubuntu';
+    font-size: 13px;
+    color: #ffa04a;
+    display: block;
+    margin-top: 50px;
+}
+
+.login-section .card .aside-right b {
+    color: #152247;
+}
+
+::ng-deep .mat-checkbox-frame {
+    border-color: #ffa04a
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #ffa04a !important;
+}
+
+
+/* responsive work */
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 1199.98px) {
+    .main-container .logo {
+        margin-bottom: 40px;
+    }
+    .login-section .card {
+        width: 84%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .login-section .card .aside-left {
+        display: none
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main-container .logo {
+        margin-bottom: 20px;
+    }
+    .login-section .card {
+        width: 95%;
+    }
+    .login-section .card .aside-right {
+        padding: 20px 10px;
+    }
+    .login-section .card .aside-right span {
+        margin-top: 40px;
+    }
+}
