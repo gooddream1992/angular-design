@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox/checkbox';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
 import { Router } from "@angular/router";
 import { LoginService } from "../../../services/login/login.service";
 import { LoginRequest, LoginResponse } from "../../../models/login.model";
@@ -16,6 +16,8 @@ export class LoginComponent{
 
   constructor(private loginService: LoginService, private router: Router) { }
 
+  loginFormErrors:any = {};
+  startLoginProcessing:boolean = false;
   loginForm = new FormGroup({
   email: new FormControl('', [
     Validators.required,
@@ -33,24 +35,42 @@ export class LoginComponent{
 });
 
   login(){
-    this.loginForm.value["session"] =  this.persistSession;
-    console.log(this.loginForm.value);
-    let loginRequest = new LoginRequest(this.loginForm.value);
-    return this.loginService.login(loginRequest).subscribe(value => {
-      console.log("data successfully received. ");
-      this.router.navigate(['/users', 'profile']);
-    },
-    error => {
-      console.log("request failure: ");
-      console.log(error);
-      //this.router.navigate(['/']);
-    });
+    this.getFormValidationErrors();
+    if(this.loginForm.status == 'VALID') {
+      this.startLoginProcessing = true;
+      this.loginForm.value["session"] =  this.persistSession;
+      let loginRequest = new LoginRequest(this.loginForm.value);
+      setTimeout(() => {
+        this.startLoginProcessing = false;
+        this.router.navigate(['/users', 'profile']);
+      }, 1000);
+      //COMMENTED CODE FOR LOGIN API TO BE INTEGRATED LATER
+      // this.loginService.login(loginRequest).subscribe(value => {
+      //   this.startLoginProcessing = false;
+      //   this.router.navigate(['/users', 'profile']);
+      // },
+      // error => {
+      //   this.startLoginProcessing = false;
+      // });
+    }
 
+  }
+
+  getFormValidationErrors() {
+    this.loginFormErrors = {};
+    Object.keys(this.loginForm.controls).forEach(key => {  
+      const controlErrors: ValidationErrors = this.loginForm.get(key).errors;
+      if (controlErrors != null) {
+        Object.keys(controlErrors).forEach(keyError => {
+          if(key == 'email') this.loginFormErrors.email = (keyError == 'required') ? 'Email is required' : (keyError == 'pattern') ? 'Please enter a valid email address.' : 'Incorrect email address.';
+          if(key == 'current-password') this.loginFormErrors.password = (keyError == 'required') ? 'Password is required' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern == '/[A-Z]/') ? 'Your password must contain atleast one uppercase letter (ex: A, B, etc.)' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern == '/[a-z]/') ? 'Your password must contain atleast one lowercase letter (ex: a, b, etc.)' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern.indexOf("d/") != -1) ? 'Your password must contain at least one number digit (ex: 0, 1, 2, 3, etc.)' : 'Your password must be between 6 and 50 characters.';
+        });
+      }
+    });
   }
 
   onChangeConditionTerms(event: MatCheckboxChange){
     this.persistSession = event.checked;
-    console.log(this.persistSession);
   }
 
 
