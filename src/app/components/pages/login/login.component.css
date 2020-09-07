@@ -93,6 +93,17 @@ mat-checkbox {
     color: #152247;
 }
 
+.form-group {
+    margin-bottom: 0 !important;
+}
+
+.login-section .card .aside-right label {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    font-family: 'Ubuntu';
+}
+
 .login-section .card .aside-right .submit-btn button {
     width: 100%;
     background: #ffa04a;
