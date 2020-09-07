@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LandingComponent } from './pages/landing/landing.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegistrationComponent } from './pages/registration/registration.component';
-import { ProfileComponent } from './pages/profile/profile.component';
+import { LandingComponent } from './components/pages/landing/landing.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { RegistrationComponent } from './components/pages/registration/registration.component';
+import { ProfileComponent } from './components/pages/profile/profile.component';
 
 // @ts-ignore
 export const routes: Routes = [
   {path:"",component:LandingComponent},
   {
-    path: 'account', 
+    path: 'account',
     children:[
       {path: '', redirectTo: 'login', pathMatch: 'full'},
       {path: 'login', component: LoginComponent},
@@ -24,25 +24,6 @@ export const routes: Routes = [
     ]
   }
 ]
-// export const routes: Routes = [
-//   { 
-//     path: '', component: LandingComponent
-//   },
-//   {
-//     path: 'account', 
-//     children:[
-//       {path: '', redirectTo: 'login', pathMatch: 'full'},
-//       {path: 'anmelden', component: LoginComponent},
-//       {path: 'anlegen', component: RegistrationComponent},
-//     ]
-//   },
-//   {
-//   path: 'users', component: ProfileComponent,
-//   children:[
-//     {path: '', redirectTo: 'profile', pathMatch: 'full'}
-//   ]
-// }
-// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

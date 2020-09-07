@@ -1,0 +1,51 @@
+<div class="main-container">
+    <app-header></app-header>
+    <div class="login-section">
+
+        <div class="card">
+            <div class="row mx-0">
+                <div class="col-lg-6 aside-left">
+
+                </div>
+                <div class="col-lg-6 col-md-12 aside-right">
+                    <h1>Melden Sie Sich An</h1>
+                    <p>Geben Sie Ihre Zugangsdaten ein, um auf Ihr Profil zu greifen</p>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="form-group">
+                        <input 
+                        formControlName="email" 
+                        id="email" 
+                        type="email" 
+                        class="form-control" 
+                        aria-describedby="emailHelp" 
+                        placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        formControlName="current-password" 
+                        id="current-password" 
+                        type="password" 
+                        class="form-control" 
+                        placeholder="Password">
+                    </div>
+                    <mat-checkbox (change)="onChangeConditionTerms($event)" class="example-margin">Angemeldet bleiben?</mat-checkbox>
+
+                    <div class="submit-btn">
+                        <button class="btn btn-primary">
+                            Sich Anmelden
+                            <mat-icon><mat-spinner diameter="20"></mat-spinner></mat-icon>     
+                        </button>
+                    </div>
+                </form>
+                    <span> 
+                        <a routerLink="/account/password-reset">Password zurücksetzen</a> 
+                        oder neues 
+                        <a routerLink="/account/register">Konto anlegen</a>?
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

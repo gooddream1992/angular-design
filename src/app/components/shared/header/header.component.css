@@ -1,0 +1,22 @@
+
+.logo {
+    text-align: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 170px;
+}
+
+@media (max-width: 1199.98px) {
+    .main-container .logo {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main-container .logo {
+        margin-bottom: 15px;
+    }
+}

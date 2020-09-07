@@ -1,48 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from "@angular/common/http";
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingComponent } from './pages/landing/landing.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { LandingHeaderComponent } from './components/landing-header/landing-header.component';
-import { LandingBannerComponent } from './components/landing-banner/landing-banner.component';
-import { LandingOfferComponent } from './components/landing-offer/landing-offer.component';
-import { LandingPriceComponent } from './components/landing-price/landing-price.component';
-import { LandingFaqComponent } from './components/landing-faq/landing-faq.component';
-import { LandingContactComponent } from './components/landing-contact/landing-contact.component';
-import { LandingFooterComponent } from './components/landing-footer/landing-footer.component';
-import { LandingLatestComponent } from './components/landing-latest/landing-latest.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegistrationComponent } from './pages/registration/registration.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import { FooterComponent } from './footer/footer.component';
+import { LandingComponent } from './components/pages/landing/landing.component';
+import { ProfileComponent } from './components/pages/profile/profile.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { RegistrationComponent } from './components/pages/registration/registration.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     ProfileComponent,
-    LandingHeaderComponent,
-    LandingBannerComponent,
-    LandingLatestComponent,
-    LandingOfferComponent,
-    LandingPriceComponent,
-    LandingFaqComponent,
-    LandingContactComponent,
-    LandingFooterComponent,
     LoginComponent,
     RegistrationComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
+    HttpClientModule,
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
