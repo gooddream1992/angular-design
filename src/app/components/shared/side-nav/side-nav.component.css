@@ -1,4 +1,5 @@
 .side-nav {
+    width: 260px;
     min-height: 100vh;
     background: #ffffff;
     padding: 20px;
@@ -8,6 +9,13 @@
     top: 0;
     left: 0;
     padding-top: 80px;
+}
+
+.side-nav .menu-container {
+    margin-top: 20px;
+    max-height: calc(100vh - 160px);
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .side-nav .user-name .img-box {
@@ -81,4 +89,13 @@
 .side-nav .actions {
     padding-top: 0;
     border: none;
+}
+
+@media (max-width: 575.98px) {
+    .side-nav {
+        padding-top: 160px;
+    }
+    .side-nav .menu-container {
+        max-height: calc(100vh - 230px);
+    }
 }
