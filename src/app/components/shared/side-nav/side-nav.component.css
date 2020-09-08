@@ -1,0 +1,84 @@
+.side-nav {
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 20px;
+    z-index: 10;
+    transition: .3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+}
+
+.side-nav .user-name .img-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.side-nav .user-name h4 {
+    margin: 0;
+    margin-left: 10px;
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    font-weight: bold;
+    color: #152247;
+}
+
+.side-nav .menu {
+    list-style: none;
+    padding: 20px 0px;
+    padding-bottom: 0;
+    margin: 0;
+    border-bottom: 1px solid #f7f5f5;
+}
+
+.side-nav .menu li {
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 6px;
+    transition: .3s;
+    margin: 5px 0px;
+}
+
+.side-nav .menu li:hover {
+    padding: 10px;
+    background: #ffa04a;
+    border-radius: 6px;
+}
+
+.side-nav .menu li.active {
+    padding: 10px;
+    background: #ffa04a;
+    border-radius: 6px;
+}
+
+.side-nav .menu li a {
+    color: #152247;
+    font-family: Ubuntu;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.side-nav .menu li:hover a {
+    color: #ffffff;
+}
+
+.side-nav .menu li.active a {
+    color: #ffffff;
+}
+
+.side-nav .menu li a i {
+    margin-right: 10px;
+}
+
+.side-nav .menu li a span {
+    float: right;
+}
+
+.side-nav .actions {
+    padding-top: 0;
+    border: none;
+}

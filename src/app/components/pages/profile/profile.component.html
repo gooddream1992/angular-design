@@ -1,3 +1,211 @@
 <div class="profile-container">
-    <router-outlet></router-outlet>
+    <!-- <router-outlet></router-outlet> -->
+    <app-profile-header></app-profile-header>
+    <div class="main-container d-flex">
+        <app-side-nav></app-side-nav>
+        <div class="content" id="content">
+            <div class="row mx-0 statics">
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Job Published</h4>
+                            <div class="total">
+                                <img src="../../../../assets/img/chart.png"> <span>70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Job Application Pending</h4>
+                            <div class="total">
+                                <img src="../../../../assets/img/chart.png"> <span>70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Job Published</h4>
+                            <div class="total">
+                                <img src="../../../../assets/img/chart.png"> <span>70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Job Application Pending</h4>
+                            <div class="total">
+                                <img src="../../../../assets/img/chart.png"> <span>70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0 align-items-center filters">
+                <div class="col-md-11 col-12 px-0">
+                    <div class="row mx-0">
+                        <div class="col-lg-3 col-md-3 col-12 input-container">
+                            <div class="input-filed">
+                                <select class="pl-2">
+                                    <option>Select Type</option>
+                                </select>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12 input-container">
+                            <div class="input-filed">
+                                <select>
+                                    <option>City</option>
+                                    <option>City</option>
+                                    <option>City</option>
+                                    <option>City</option>
+                                </select>
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-map-marker-alt icon-2"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12 input-container">
+                            <div class="input-filed">
+                                <input type="date">
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="far fa-calendar-alt icon-2"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12 input-container">
+                            <div class="input-filed">
+                                <select class="pl-2">
+                                    <option>Latest</option>
+                                </select>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 col-12 btn-container">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="row mx-0 jobs">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="header d-flex justify-content-between">
+                                <div class="heading d-flex align-items-center">
+                                    <div class="img-box">
+                                        <img src="../../../../assets/img/assembler.png" alt="" class="img-fluid">
+                                    </div>
+                                    <h1>Umzugshelfer am 17.08. für ca. 6 Stunden</h1>
+                                </div>
+                                <div class="time">
+                                    <span><i class="far fa-clock"></i> vor 3 std</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="row mx-0 jobs-timing">
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="far fa-calendar-alt"></i> 17/11/2020</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-euro-sign"></i> 10,000 &euro;/Std</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-stopwatch"></i>ca. 6 Stun­den</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-map-marker-alt"></i>71364 Win­nen­den</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0 jobs">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="header d-flex justify-content-between">
+                                <div class="heading d-flex align-items-center">
+                                    <div class="img-box">
+                                        <img src="../../../../assets/img/Cleaner.png" alt="" class="img-fluid">
+                                    </div>
+                                    <h1>Umzugshelfer am 17.08. für ca. 6 Stunden</h1>
+                                </div>
+                                <div class="time">
+                                    <span><i class="far fa-clock"></i> vor 3 std</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="row mx-0 jobs-timing">
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="far fa-calendar-alt"></i> 17/11/2020</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-euro-sign"></i> 10,000 &euro;/Std</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-stopwatch"></i>ca. 6 Stun­den</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-map-marker-alt"></i>71364 Win­nen­den</span>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <p>
+                                    Vestibulum dui orci, venenatis id imperdiet et, accumsan ac arcu. In sit amet aliquam orci. Donec dapibus eget urna id egestas. Pellentesque accumsan nisl ut porttitor placerat. Vestibulum lobortis nisi risus, non interdum tellus finibus sollicitudin.
+                                    Morbi euismod eget lacus id tristique. Sed tincidunt efficitur erat quis congue. Aliquam pulvinar est eu risus iaculis, nec consequat nibh euismod. Nam lacinia massa libero, a interdum justo egestas eget. In eget velit
+                                    pretium, euismod quam non, cursus elit. Mauris id mauris vel nulla pharetra porttitor sed vel nibh.
+                                </p>
+                                <button>Bewerben</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0 jobs">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="header d-flex justify-content-between">
+                                <div class="heading d-flex align-items-center">
+                                    <div class="img-box">
+                                        <img src="../../../../assets/img/Driver.png" alt="" class="img-fluid">
+                                    </div>
+                                    <h1>Umzugshelfer am 17.08. für ca. 6 Stunden</h1>
+                                </div>
+                                <div class="time">
+                                    <span><i class="far fa-clock"></i> vor 3 std</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="row mx-0 jobs-timing">
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="far fa-calendar-alt"></i> 17/11/2020</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-euro-sign"></i> 10,000 &euro;/Std</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-stopwatch"></i>ca. 6 Stun­den</span>
+                                </div>
+                                <div class="col-md-3 col-6 px-0">
+                                    <span><i class="fas fa-map-marker-alt"></i>71364 Win­nen­den</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
 </div>
