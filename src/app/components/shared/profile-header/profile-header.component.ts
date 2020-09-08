@@ -12,7 +12,7 @@ export class ProfileHeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.sidenNavResponsive();
-    this.toggleSidenav();
+   
   }
 
   toggleSidenav() {
@@ -21,9 +21,10 @@ export class ProfileHeaderComponent implements OnInit {
     this.toggleNavbar =  !this.toggleNavbar;
   
     if (this.toggleNavbar) {
-      sideNav.style.transform = "translatex(-260px)";
-    }else{
       sideNav.style.transform = "translatex(0px)";
+    }else{
+     
+      sideNav.style.transform = "translatex(-260px)";
     }
   }
 
@@ -37,6 +38,7 @@ export class ProfileHeaderComponent implements OnInit {
     var toggleBtn = document.getElementById('toggleBtn');
     if (screen.width > 768) {
       content.style.width = "calc(100% - 260px)";
+      
       content.style.marginLeft = "260px"
       toggleBtn.style.display = "none";
       sideNav.style.transform = "translatex(0px)";
