@@ -20,6 +20,7 @@
                         aria-describedby="emailHelp" 
                         placeholder="Email">
                     </div>
+                    <label>{{loginFormErrors.email}}</label>
                     <div class="form-group">
                         <input 
                         formControlName="current-password" 
@@ -28,13 +29,13 @@
                         class="form-control" 
                         placeholder="Password">
                     </div>
+                    <label>{{loginFormErrors.password}}</label>
+                    <br>
                     <mat-checkbox (change)="onChangeConditionTerms($event)" class="example-margin">Angemeldet bleiben?</mat-checkbox>
 
                     <div class="submit-btn">
-                        <button class="btn btn-primary">
-                            Sich Anmelden
-                            <mat-icon><mat-spinner diameter="20"></mat-spinner></mat-icon>     
-                        </button>
+                        <button class="btn btn-primary" *ngIf="!startLoginProcessing">Sich Anmelden</button>
+                        <button class="btn btn-primary align-items-center d-flex justify-content-center" *ngIf="startLoginProcessing"><mat-icon class="mr-1"><mat-spinner diameter="20"></mat-spinner></mat-icon> Processing...</button>
                     </div>
                 </form>
                     <span> 

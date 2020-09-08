@@ -16,6 +16,7 @@
                             class="form-control" 
                             placeholder="Vor- und Nachname">
                         </div>
+                        <label>{{registerFormErrors.fullName}}</label>
                         <div class="form-group">
                             <input 
                             formControlName="mobile" 
@@ -24,6 +25,7 @@
                             class="form-control" 
                             placeholder="Mobile">
                         </div>
+                        <label>{{registerFormErrors.mobile}}</label>
                         <div class="form-group">
                             <input 
                             formControlName="email" 
@@ -33,6 +35,7 @@
                             aria-describedby="emailHelp" 
                             placeholder="Email">
                         </div>
+                        <label>{{registerFormErrors.email}}</label>
                         <div class="form-group">
                             <input 
                             formControlName="current-password" 
@@ -41,16 +44,16 @@
                             class="form-control" 
                             placeholder="Password">
                         </div>
+                        <label>{{registerFormErrors.password}}</label>
+                        <br>
                         <mat-checkbox (change)="onChangeConditionTerms($event)" class="example-margin">
                             Ich bestatige, dass ich die Allgemeine Geschaftsbedingungen gelesen habe und akzeptiere
                         </mat-checkbox>
-                        <re-captcha (resolved)="resolved($event)" siteKey="YOUR_SITE_KEY"></re-captcha>
+                        <re-captcha (resolved)="resolved($event)" siteKey="6LcK8cgZAAAAAPUF-3Axc-gVcBMK74-jccCmxjLl"></re-captcha>
 
                         <div class="submit-btn">
-                            <button class="btn btn-primary">
-                                Sich Registrieren
-                                <mat-icon><mat-spinner diameter="20"></mat-spinner></mat-icon>     
-                            </button>
+                            <button [disabled]="!isConditionAccepted" class="btn btn-primary" *ngIf="!startRegisterProcessing">Sich Registrieren</button>
+                            <button class="btn btn-primary align-items-center d-flex justify-content-center" *ngIf="startRegisterProcessing"><mat-icon class="mr-1"><mat-spinner diameter="20"></mat-spinner></mat-icon> Processing...</button>
                         </div>
                     </form>
                     <span>Falls Sie bereits ein Konto haben, <a routerLink="/account/login">loggen Sie sich ein.</a></span>
