@@ -17,6 +17,9 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { RegistrationComponent } from './components/pages/registration/registration.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HeaderComponent } from './components/shared/header/header.component';
+import {ProfileHeaderComponent} from './components/shared/profile-header/profile-header.component';
+import { SideNavComponent } from './components/shared/side-nav/side-nav.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { HeaderComponent } from './components/shared/header/header.component';
     LoginComponent,
     RegistrationComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProfileHeaderComponent,
+    SideNavComponent
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,8 @@ import { HeaderComponent } from './components/shared/header/header.component';
     RecaptchaFormsModule,
     HttpClientModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

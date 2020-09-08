@@ -1,0 +1,62 @@
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.hedaet-container {
+    background: #ffffff;
+    border-bottom: 1px solid #f7f5f5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+}
+
+.hedaet-container .logo {
+    padding: 15px 20px;
+}
+
+.hedaet-container .logo img {
+    width: 150px;
+}
+
+.hedaet-container .logo .toggle-btn {
+    width: 40px;
+    height: 40px;
+    background: #ffa04a;
+    color: #ffffff;
+    margin-right: 10px;
+    margin-top: 3px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hedaet-container .publish {
+    background: #ffa04a;
+    padding: 20px;
+}
+
+.hedaet-container .publish span {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Ubuntu';
+}
+
+@media (max-width: 575.98px) {
+    .hedaet-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hedaet-container .logo img {
+        width: 200px;
+    }
+    .hedaet-container .logo .toggle-btn {
+        margin-top: 6px;
+    }
+    .hedaet-container .publish {
+        width: 100%;
+        text-align: center;
+    }
+}
