@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatCheckboxChange } from '@angular/material/checkbox/checkbox';
 import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
 import { Router } from "@angular/router";
 import { LoginService } from "../../../services/login/login.service";
@@ -12,10 +11,9 @@ import { LoginRequest, LoginResponse } from "../../../models/login.model";
 })
 export class LoginComponent{
 
-  persistSession: boolean = false;
-
   constructor(private loginService: LoginService, private router: Router) { }
 
+  persistSession: boolean = false;
   loginFormErrors:any = {};
   startLoginProcessing:boolean = false;
   loginForm = new FormGroup({
@@ -69,7 +67,7 @@ export class LoginComponent{
     });
   }
 
-  onChangeConditionTerms(event: MatCheckboxChange){
+  onChangeConditionTerms(event: any){
     this.persistSession = event.checked;
   }
 

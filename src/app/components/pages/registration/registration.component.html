@@ -35,7 +35,7 @@
                             aria-describedby="emailHelp" 
                             placeholder="Email">
                         </div>
-                        <label>{{registerFormErrors.email}}</label>
+                         <label>{{registerFormErrors.email}}</label>
                         <div class="form-group">
                             <input 
                             formControlName="current-password" 
@@ -46,9 +46,13 @@
                         </div>
                         <label>{{registerFormErrors.password}}</label>
                         <br>
-                        <mat-checkbox (change)="onChangeConditionTerms($event)" class="example-margin">
-                            Ich bestatige, dass ich die Allgemeine Geschaftsbedingungen gelesen habe und akzeptiere
-                        </mat-checkbox>
+                        <div class="p-field-checkbox">
+                            <p-checkbox 
+                                [(ngModel)]="termsAccepted"  
+                                [ngModelOptions]="{standalone: true}"
+                                binary="true" 
+                                label="Ich bestatige, dass ich die Allgemeine Geschaftsbedingungen gelesen habe und akzeptiere"></p-checkbox>
+                        </div>
                         <re-captcha (resolved)="resolved($event)" siteKey="6LcK8cgZAAAAAPUF-3Axc-gVcBMK74-jccCmxjLl"></re-captcha>
 
                         <div class="submit-btn">

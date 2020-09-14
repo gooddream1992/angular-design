@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
-import { MatCheckboxChange } from '@angular/material/checkbox/checkbox';
 import { Router } from "@angular/router";
 import { RegistrationService } from "../../../services/registration/registration.service";
 import { RegistrationRequest } from "../../../models/registration.model";
@@ -19,7 +18,7 @@ export class RegistrationComponent {
 
   registerFormErrors:any = {};
   startRegisterProcessing:boolean = false;
-  isConditionAccepted: boolean = false;
+  termsAccepted: boolean = false;
 
   registrationForm = new FormGroup({
     fullName: new FormControl('', [
@@ -47,8 +46,8 @@ export class RegistrationComponent {
     ])
   });
 
-  onChangeConditionTerms(event: MatCheckboxChange){
-    this.isConditionAccepted = event.checked;
+  onChangeConditionTerms(event: any){
+    this.termsAccepted = event.checked;
   }
 
   resolved(captchaResponse: string) {
@@ -59,7 +58,7 @@ export class RegistrationComponent {
     this.getFormValidationErrors();
     if(this.registrationForm.status == 'VALID') {
 
-      this.registrationForm.value["terms"]=this.isConditionAccepted;
+      this.registrationForm.value["terms"]=this.termsAccepted;
       let registration = new RegistrationRequest(this.registrationForm.value);
       setTimeout(() => {
         this.startRegisterProcessing = false;
@@ -82,10 +81,14 @@ export class RegistrationComponent {
       if (controlErrors != null) {
         Object.keys(controlErrors).forEach(keyError => {
           
-          if(key == 'fullName') this.registerFormErrors.fullName = (keyError == 'required') ? 'Full name is required.' : 'Full name must be between 2 and 50 characters. ';
-          if(key == 'mobile') this.registerFormErrors.mobile = (keyError == 'required') ? 'Mobile number is required.' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern.indexOf("d/") != -1) ? 'Mobile number must contain numbers only.' : 'Mobile number must not be greater than 25 digits.';
-          if(key == 'email') this.registerFormErrors.email = (keyError == 'required') ? 'Email is required' : (keyError == 'pattern') ? 'Please enter a valid email address.' : 'Incorrect email address.';
-          if(key == 'current-password') this.registerFormErrors.password = (keyError == 'required') ? 'Password is required' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern == '/[A-Z]/') ? 'Your password must contain atleast one uppercase letter (ex: A, B, etc.)' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern == '/[a-z]/') ? 'Your password must contain atleast one lowercase letter (ex: a, b, etc.)' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern.indexOf("d/") != -1) ? 'Your password must contain at least one number digit (ex: 0, 1, 2, 3, etc.)' : 'Your password must be between 6 and 50 characters.';
+          if(key == 'fullName') 
+            this.registerFormErrors.fullName = (keyError == 'required') ? 'Full name is required.' : 'Full name must be between 2 and 50 characters. ';
+          if(key == 'mobile') 
+            this.registerFormErrors.mobile = (keyError == 'required') ? 'Mobile number is required.' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern.indexOf("d/") != -1) ? 'Mobile number must contain numbers only.' : 'Mobile number must not be greater than 25 digits.';
+          if(key == 'email') 
+            this.registerFormErrors.email = (keyError == 'required') ? 'Email is required' : (keyError == 'pattern') ? 'Please enter a valid email address.' : 'Incorrect email address.';
+          if(key == 'current-password') 
+            this.registerFormErrors.password = (keyError == 'required') ? 'Password is required' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern == '/[A-Z]/') ? 'Your password must contain atleast one uppercase letter (ex: A, B, etc.)' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern == '/[a-z]/') ? 'Your password must contain atleast one lowercase letter (ex: a, b, etc.)' : (keyError == 'pattern' && controlErrors[keyError].requiredPattern.indexOf("d/") != -1) ? 'Your password must contain at least one number digit (ex: 0, 1, 2, 3, etc.)' : 'Your password must be between 6 and 50 characters.';
         });
       }
     });

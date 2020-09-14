@@ -36,6 +36,7 @@ button:focus {
 .hedaet-container .publish {
     background: #ffa04a;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .hedaet-container .publish span {

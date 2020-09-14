@@ -31,8 +31,14 @@
                     </div>
                     <label>{{loginFormErrors.password}}</label>
                     <br>
-                    <mat-checkbox (change)="onChangeConditionTerms($event)" class="example-margin">Angemeldet bleiben?</mat-checkbox>
-
+                    <div>
+                        <p-checkbox 
+                            [(ngModel)]="persistSession"  
+                            [ngModelOptions]="{standalone: true}"
+                            binary="true" 
+                            label="Angemeldet bleiben?"
+                            ></p-checkbox>
+                    </div>
                     <div class="submit-btn">
                         <button class="btn btn-primary" *ngIf="!startLoginProcessing">Sich Anmelden</button>
                         <button class="btn btn-primary align-items-center d-flex justify-content-center" *ngIf="startLoginProcessing"><mat-icon class="mr-1"><mat-spinner diameter="20"></mat-spinner></mat-icon> Processing...</button>
