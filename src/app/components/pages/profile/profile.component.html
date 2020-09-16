@@ -4,7 +4,7 @@
     <div class="main-container d-flex">
         <app-side-nav></app-side-nav>
         <div class="content" id="content">
-            <!-- <div class="row mx-0 statics">
+            <div class="row mx-0 statics">
                 <div class="col-md-3 col-12">
                     <div class="card">
                         <div class="card-body">
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
 
             <div class="row mx-0 align-items-center filters">
@@ -53,37 +53,22 @@
                     <div class="row mx-0">
                         <div class="col-lg-3 col-md-3 col-12 input-container">
                             <div class="input-filed">
-                                <select class="pl-2">
-                                    <option>Select Type</option>
-                                </select>
-                                <i class="fas fa-chevron-down"></i>
+                                <p-dropdown placeholder="Select Type"></p-dropdown>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-12 input-container">
                             <div class="input-filed">
-                                <select>
-                                    <option>City</option>
-                                    <option>City</option>
-                                    <option>City</option>
-                                    <option>City</option>
-                                </select>
-                                <i class="fas fa-chevron-down"></i>
-                                <i class="fas fa-map-marker-alt icon-2"></i>
+                                <p-dropdown placeholder="City"></p-dropdown>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-12 input-container">
                             <div class="input-filed">
-                                <input type="date">
-                                <i class="fas fa-chevron-down"></i>
-                                <i class="far fa-calendar-alt icon-2"></i>
+                                <p-calendar [showIcon]="true" inputId="icon" placeholder="12-Sep-2020"></p-calendar>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-12 input-container">
                             <div class="input-filed">
-                                <select class="pl-2">
-                                    <option>Latest</option>
-                                </select>
-                                <i class="fas fa-chevron-down"></i>
+                                <p-dropdown placeholder="latest"></p-dropdown>
                             </div>
                         </div>
                     </div>
@@ -92,64 +77,56 @@
                     <button class="search-btn"><i class="fas fa-search"></i></button>
                 </div>
             </div>
-
-
-
-
-            <p-accordion>
-                <p-accordionTab>
-                    <ng-template pTemplate="header">
-
-                        <div class="img-box">
-                            <img src="../../../../assets/img/assembler.png" width="20%" alt="" class="img-fluid">
-                        </div>
-                        <b>Umzugshelfer am 17.08. für ca. 6 Stunden</b>
-                        <div class="time">
-                            <span><i class="far fa-clock"></i> vor 3 std</span>
-                        </div>
-
-                    </ng-template>
-
-                    <ng-template pTemplate="content">
-                        <div class="row mx-0 jobs">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="header d-flex justify-content-between">
-                                            <div class="heading d-flex align-items-center">
-                                            </div>
+            <div class="row mx-0 jobs">
+                <div class="col-12">
+                    <p-accordion>
+                        <p-accordionTab *ngFor="let x of [1,2,3,4];">
+                            <ng-template pTemplate="header">
+                                <div class="header d-flex justify-content-between w-100">
+                                    <div class="heading d-flex align-items-center">
+                                        <div class="img-box">
+                                            <img src="../../../../assets/img/assembler.png" width="20%" alt="" class="img-fluid">
                                         </div>
-                                        <div class="row mx-0 jobs-timing">
-                                            <div class="col-md-3 col-6 px-0">
-                                                <span><i class="far fa-calendar-alt"></i> 17/11/2020</span>
-                                            </div>
-                                            <div class="col-md-3 col-6 px-0">
-                                                <span><i class="fas fa-euro-sign"></i> 10,000 &euro;/Std</span>
-                                            </div>
-                                            <div class="col-md-3 col-6 px-0">
-                                                <span><i class="fas fa-stopwatch"></i>ca. 6 Stun­den</span>
-                                            </div>
-                                            <div class="col-md-3 col-6 px-0">
-                                                <span><i class="fas fa-map-marker-alt"></i>71364 Win­nen­den</span>
-                                            </div>
+                                        <h1>Umzugshelfer am 17.08. für ca. 6 Stunden</h1>
+                                    </div>
+                                    <div class="time">
+                                        <span><i class="far fa-clock"></i> vor 3 std</span>
+                                    </div>
+                                </div>
+                                <div class="row mx-0 jobs-timing">
+                                    <div class="col-md-3 col-6 px-0">
+                                        <span><i class="far fa-calendar-alt"></i> 17/11/2020</span>
+                                    </div>
+                                    <div class="col-md-3 col-6 px-0">
+                                        <span><i class="fas fa-euro-sign"></i> 10,000 &euro;/Std</span>
+                                    </div>
+                                    <div class="col-md-3 col-6 px-0">
+                                        <span><i class="fas fa-stopwatch"></i>ca. 6 Stun­den</span>
+                                    </div>
+                                    <div class="col-md-3 col-6 px-0">
+                                        <span><i class="fas fa-map-marker-alt"></i>71364 Win­nen­den</span>
+                                    </div>
+                                </div>
+                            </ng-template>
+
+                            <ng-template pTemplate="content">
+                                <div class="row mx-0 jobs">
+                                    <div class="col-12">
+                                        <div class="job-description">
+                                            <p> test some content here test some content here ...</p>
+                                            <button>Apply</button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </ng-template>
 
-                        test some content here test some content here ...
-                        <br>
-                        <br>
-                        <button>Apply</button>
-                    </ng-template>
+                        </p-accordionTab>
 
-                </p-accordionTab>
-
-            </p-accordion>
-
+                    </p-accordion>
+                </div>
+            </div>
 
         </div>
     </div>
-    <app-footer></app-footer>
 </div>
+<app-footer></app-footer>

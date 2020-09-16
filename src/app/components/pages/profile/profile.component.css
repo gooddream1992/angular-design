@@ -5,13 +5,15 @@ button:focus {
 
 .main-container {
     width: 100%;
+    min-height: calc(100vh - 39px);
 }
 
 .main-container .content {
     background: #f7f5f5;
     min-height: calc(100vh - 62px);
     padding: 20px 0px;
-    padding-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 0;
 }
 
 .content .statics .card {
@@ -28,6 +30,7 @@ button:focus {
     color: #152247;
     font-weight: bold;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .content .statics .card .card-body .total img {
@@ -50,56 +53,10 @@ button:focus {
     padding: 20px 0px;
 }
 
-.filters .input-filed {
-    position: relative;
-}
-
-.filters .input-filed select,
-input {
-    width: 100%;
-    padding: 15px 10px;
-    padding-left: 30px;
-    border: none;
-    border-radius: 6px;
-    font-family: Ubuntu;
-    font-weight: bold;
-    background: #ffffff;
-    color: #152247;
-    -o-appearance: none;
-    -ms-appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-}
-
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0 !important;
-    cursor: pointer;
-}
-
-.filters .input-filed i {
-    position: absolute;
-    color: #ffa04a;
-    right: 15px;
-    top: 19px;
-    pointer-events: none;
-}
-
-.filters .input-filed .icon-2 {
-    position: absolute;
-    color: #dcdbdb;
-    left: 8px;
-    top: 16px;
-    font-size: 17px;
-    pointer-events: none;
-}
-
 .filters .search-btn {
     color: #ffffff;
     font-weight: bold;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border: none;
     background: #ffa04a;
     border-radius: 10px;
@@ -109,20 +66,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     outline: none;
 }
 
-.jobs {
-    margin-bottom: 20px;
-}
-
-.jobs .card {
-    border: none;
-    border-radius: 6px;
-}
-
-.jobs .card .card-body {
-    padding: 15px;
-}
-
-.jobs .card .card-body .header .heading .img-box {
+.jobs .header .heading .img-box {
     width: 40px;
     height: 40px;
     background: #ffd9b7;
@@ -131,13 +75,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-right: 10px;
 }
 
-.jobs .card .card-body .header .heading img {
+.jobs .header .heading img {
     width: 50px;
     margin-top: 5px;
     margin-left: -4px;
 }
 
-.jobs .card .card-body .header .heading h1 {
+.jobs .header .heading h1 {
     font-family: Ubuntu;
     font-size: 19px;
     font-weight: bold;
@@ -145,21 +89,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #152247;
 }
 
-.jobs .card .card-body .header .time span {
+.jobs .header .time span {
     font-family: Ubuntu;
     font-size: 13px;
     color: #152247;
     display: block;
 }
 
-.jobs .card .card-body .header .time span i {
+.jobs .header .time span i {
     font-size: 13px;
     color: #152247;
     float: unset;
     margin: 0;
 }
 
-.jobs .card .card-body .header .time i {
+.jobs .header .time i {
     font-size: 16px;
     color: #ffa04a;
     float: right;
@@ -184,19 +128,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-right: 5px;
 }
 
-.jobs .card .card-body .job-description {
+.jobs .job-description {
     width: 87%;
-    padding: 10px;
 }
 
-.jobs .card .card-body .job-description p {
-    padding-left: 50px;
+.jobs .job-description p {
+    padding-left: 60px;
     font-family: Ubuntu;
     font-size: 14px;
     color: #152247;
 }
 
-.jobs .card .card-body .job-description button {
+.jobs .job-description button {
     color: #ffffff;
     font-weight: bold;
     border: none;
@@ -206,6 +149,80 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     float: right;
     font-family: Ubuntu;
     font-size: 14px;
+}
+
+::ng-deep .p-accordion-header-link {
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+
+::ng-deep .p-accordion-header-link:hover {
+    background: #ffffff !important;
+    text-decoration: none !important;
+}
+
+::ng-deep .p-accordion .p-accordion-tab {
+    box-shadow: none;
+    margin-bottom: 10px !important;
+}
+
+::ng-deep .p-accordion-toggle-icon {
+    position: absolute;
+    right: 12px;
+    top: 45px;
+    color: #ffa04a;
+}
+
+::ng-deep .p-accordion .p-accordion-tab:not(.p-accordion-tab-active) .p-accordion-header-link:focus {
+    background: #ffffff;
+}
+
+::ng-deep .p-accordion-content {
+    padding: 0px !important;
+    padding-bottom: 15px !important;
+}
+
+::ng-deep .p-dropdown {
+    width: 100%;
+    border: none !important;
+}
+
+::ng-deep .p-calendar {
+    width: 100%;
+}
+
+::ng-deep .p-dropdown:not(.p-disabled).p-focus {
+    box-shadow: none !important;
+}
+
+::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
+    color: rgb(21 34 71);
+    padding: 12px !important;
+    font-family: ubuntu;
+    font-weight: bold;
+    font-size: 14px;
+    color: #152247 !important;
+}
+
+::ng-deep .p-inputtext,
+.p-datepicker-trigger {
+    padding: 10px !important;
+    font-family: ubuntu;
+    font-weight: bold;
+    font-size: 14px !important;
+    color: #152247 !important;
+}
+
+::ng-deep .p-calendar-w-btn {
+    border: none !important;
+}
+
+:ng-deep .p-calendar-w-btn .p-datepicker-trigger.p-button {
+    padding: 0px !important;
+}
+
+::ng-deep .pi {
+    color: #ffa04a !important;
 }
 
 
@@ -309,15 +326,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         width: 100%;
         margin-top: 10px;
     }
-    .jobs .card .card-body .header {
+    .jobs .header {
         flex-direction: column-reverse;
     }
-    .jobs .card .card-body .header .heading h1 {
+    .jobs .header .heading h1 {
         font-size: 17px;
         width: calc(100% - 40px);
         line-height: 20px;
     }
-    .jobs .card .card-body .header .time {
+    .jobs .header .time {
         display: flex;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -325,7 +342,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         justify-content: space-between;
         padding-bottom: 10px;
     }
-    .jobs .card .card-body .header .time i {
+    .jobs .header .time i {
         margin: 0;
     }
     .jobs-timing {
@@ -333,14 +350,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding: 0px;
         padding-top: 12px;
     }
-    .jobs .card .card-body .job-description {
+    .jobs .job-description {
         width: 100%;
         padding: 10px;
     }
-    .jobs .card .card-body .job-description p {
+    .jobs .job-description p {
         padding-left: 0px;
     }
-    .jobs .card .card-body .job-description button {
+    .jobs .job-description button {
         width: 100%;
+    }
+     ::ng-deep .p-accordion-toggle-icon {
+        top: 25px;
     }
 }
