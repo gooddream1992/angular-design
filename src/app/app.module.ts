@@ -7,6 +7,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {CheckboxModule} from 'primeng/checkbox';
 import {AccordionModule} from 'primeng/accordion';
 import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
+import {DropdownModule} from 'primeng/dropdown';
+import {CalendarModule} from 'primeng/calendar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +44,9 @@ import { SideNavComponent } from './components/shared/side-nav/side-nav.componen
     RecaptchaFormsModule,
     HttpClientModule,
     CheckboxModule,
-    AccordionModule
+    AccordionModule,
+    DropdownModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

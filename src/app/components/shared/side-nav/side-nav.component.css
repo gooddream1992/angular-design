@@ -12,8 +12,7 @@
 }
 
 .side-nav .menu-container {
-    margin-top: 20px;
-    max-height: calc(100vh - 160px);
+    max-height: calc(100vh - 145px);
     overflow: hidden;
     overflow-y: auto;
 }
@@ -39,6 +38,7 @@
     padding: 20px 0px;
     padding-bottom: 0;
     margin: 0;
+    padding-right: 5px;
     border-bottom: 1px solid #f7f5f5;
 }
 
@@ -98,4 +98,32 @@
     .side-nav .menu-container {
         max-height: calc(100vh - 230px);
     }
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #ffa04a;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #ffa04a;
 }
